@@ -1,0 +1,25 @@
+.btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 13px;
+    padding: 15px;
+    border: 2px solid $main;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+    &:hover {
+        background-color: $main-accent;
+        border: 2px solid transparent;
+    }
+
+    &_fill {
+        color: $white;
+        background-color: $main;
+    }
+
+    &_round {
+        border-radius: 20px;
+    }
+
+}

@@ -1,0 +1,77 @@
+.promo {
+    padding-top: 113px;
+    padding-bottom: 310px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__accent {
+        padding-top: 130px;
+    }
+
+    &__title {
+        padding-bottom: 25px;
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    &__images {
+        padding-left: 21px;
+    }
+
+
+    &__higher-img {
+        position: relative;
+    }
+
+    &__lower-img {
+        position: absolute;
+        transform: translate(169px, -225px);
+    }
+
+    &__higher-person {
+        @include promo-person;
+
+        padding: 5px 15px 5px 8px;
+        column-gap: 5px;
+        top: 15px;
+        transform: translateX(-40px);
+    }
+
+    &__lower-person {
+        @include promo-person;
+
+        padding: 7px 13px 7px 11px;
+        column-gap: 12px;
+        bottom: 22px;
+        transform: translateX(-75px);
+    }
+
+    &__higher-name {
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    &__lower-name {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &__higher-profession {
+        font-size: 9px;
+        line-height: 1.2;
+    }
+
+    &__lower-profession {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+
+
+}

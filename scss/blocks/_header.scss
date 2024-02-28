@@ -1,0 +1,23 @@
+.header {
+
+    padding-top: 17px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 28px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        column-gap: 46px;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: 47px;
+    }
+}
