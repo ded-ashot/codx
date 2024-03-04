@@ -1,0 +1,27 @@
+.marquee {
+    padding: 41px 0;
+    overflow: hidden;
+    display: flex;
+
+    &__image {
+        width: calc(100vw / 10);
+        max-width: unset;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        animation: ticker 10s linear infinite;
+    }
+
+    @keyframes ticker {
+        from {
+            transform: translateZ(0);
+        }
+
+        to {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+}

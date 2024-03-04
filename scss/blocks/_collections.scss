@@ -1,0 +1,34 @@
+.collections {
+    padding-top: 101px;
+
+    &__title {
+        text-align: center;
+        padding-bottom: 73px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 64px;
+    }
+
+    &__heading {
+        padding: 29px 0 37px 50px;
+    }
+
+    &__heading h3 {
+        font-size: 26px;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        min-width: 134px;
+        height: 44px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}

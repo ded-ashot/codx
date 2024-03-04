@@ -1,0 +1,47 @@
+.our-work {
+    padding-top: 96px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__text {
+        padding-left: 48px;
+        padding-top: 62px;
+    }
+
+    &__title {
+        padding-bottom: 2px;
+        text-transform: uppercase;
+    }
+
+    &__caption {
+        padding-bottom: 38px;
+    }
+
+    &__title-2 {
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: 0.48px;
+    }
+
+    &__description {
+        line-height: 1.44;
+        letter-spacing: 0.48px;
+        padding-bottom: 32px;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1.1;
+        padding: 0 40px;
+        height: 44px;
+    }
+}

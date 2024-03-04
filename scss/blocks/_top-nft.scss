@@ -1,0 +1,112 @@
+.top-nft {
+    padding-top: 104px;
+
+    &__container {
+        max-width: 1102px;
+        padding: 0 15px;
+    }
+
+    &__title {
+        text-align: center;
+        padding-bottom: 16px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 38px;
+        row-gap: 41px;
+        padding-bottom: 64px;
+    }
+
+    &__item-link {
+        display: block;
+        max-width: 332px;
+        max-height: 210px;
+        overflow: hidden;
+        border-radius: 30px;
+    }
+
+    &__item-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    &__item-information {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__item-title {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__item-count {
+        font-weight: 700;
+        font-size: 17px;
+    }
+
+    &__buttons-eye {
+        @include top-nft-buttons;
+        background-color: $nft-eye;
+
+        &>svg {
+            transition: all .3s;
+        }
+
+        &:hover svg {
+            width: 22px;
+            height: 28px;
+        }
+    }
+
+    &__buttons-lock {
+        @include top-nft-buttons;
+        background-color: $accent-pink;
+        border-radius: 50%;
+
+        &>svg {
+            width: 18px;
+            height: 24px;
+            fill: white;
+        }
+
+        &:hover .bracket {
+            transform: translate(0, -125px);
+        }
+    }
+
+    &__item-image {
+        transition: transform .2s ease-in;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        min-width: 134px;
+        height: 44px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+.bracket {
+    transition: all .3s;
+}

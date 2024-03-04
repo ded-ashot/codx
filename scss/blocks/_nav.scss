@@ -6,4 +6,12 @@
         font-size: 15px;
     }
 
+    &__list a {
+        color: $main;
+        transition: color .2s ease-in;
+
+        &:hover {
+            color: $main-accent;
+        }
+    }
 }
