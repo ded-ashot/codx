@@ -23,28 +23,28 @@ acc_btns.forEach((item, index) => {
     });
 });
 
-// let tabs_btn = document.querySelectorAll('.about-us__btn');
-// let tabs_conten = document.querySelectorAll('.about-us__item');
+let tabs_btn = document.querySelectorAll('.about-us__btn');
+let tabs_conten = document.querySelectorAll('.about-us__item');
 
-// for (let index = 0; index < tabs_btn.length; index++) {
-//     tabs_btn[index].addEventListener("click", function () {
-//         tabs_btn[index].classList.add('button-link_active');
-//         tabs_conten[index].classList.add('about-us__item_active');
+for (let index = 0; index < tabs_btn.length; index++) {
+    tabs_btn[index].addEventListener("click", function () {
+        tabs_btn[index].classList.add('button-link_active');
+        tabs_conten[index].classList.add('about-us__item_active');
 
-//         for (let j = 0; j < tabs_btn.length; j++) {
-//             if (j != index) {
-//                 tabs_btn[j].classList.remove('button-link_active');
-//                 tabs_conten[j].classList.remove('about-us__item_active');
-//             }
-//         }
-//     }
-//     );
-// }
+        for (let j = 0; j < tabs_btn.length; j++) {
+            if (j != index) {
+                tabs_btn[j].classList.remove('button-link_active');
+                tabs_conten[j].classList.remove('about-us__item_active');
+            }
+        }
+    }
+    );
+}
 
-// let burger_btn = document.querySelector('.header__burger');
+let burger_btn = document.querySelector('.header__burger');
 
-// function burger() {
-//     burger_btn.classList.toggle('header__burger_active');
-// }
-// burger_btn.addEventListener("click", burger);
+function burger() {
+    burger_btn.classList.toggle('header__burger_active');
+}
+burger_btn.addEventListener("click", burger);
 
