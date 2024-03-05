@@ -1,0 +1,145 @@
+.faq {
+    padding-top: 55px;
+    padding-bottom: 103px;
+
+    &__container {
+        max-width: 1102px;
+        padding: 0 15px;
+    }
+
+    &__title {
+        padding-bottom: 25px;
+    }
+
+    &__accordion-btn {
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px 26px 29px 26px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 1.1;
+        transition: color .2s;
+        cursor: pointer;
+
+        &:hover {
+            color: $accent-green;
+        }
+    }
+
+    &__lines {
+        padding-right: 27px;
+        position: relative;
+        cursor: pointer;
+        width: 22px;
+        height: 17px;
+        display: block;
+    }
+
+    &__line1 {
+        @include accordion_line;
+        transform: rotate(45deg);
+        animation: close1 .3s ease-in-out;
+
+        &_active {
+            animation: open1 .3s ease-in-out;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__line2 {
+        @include accordion_line;
+        transform: rotate(-45deg);
+        right: 5px;
+        animation: close2 .3s ease-in-out;
+
+        &_active {
+            animation: open2 .3s ease-in-out;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__accordion-panel {
+        padding-left: 26px;
+        padding-right: 100px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s linear;
+        font-size: 16px;
+
+    }
+}
+
+
+@keyframes open1 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(-45deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes open2 {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes close1 {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes close2 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(-45deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}

@@ -8,12 +8,13 @@
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: minmax(260px, 358px) minmax(260px, 358px) minmax(260px, 358px);
+        justify-content: space-between;
         padding-bottom: 64px;
     }
 
     &__heading {
-        padding: 29px 0 37px 50px;
+        padding: 29px 50px 37px 50px;
     }
 
     &__heading h3 {

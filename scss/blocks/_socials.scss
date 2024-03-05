@@ -2,4 +2,13 @@
     display: flex;
     align-items: center;
     column-gap: 19px;
+
+    path {
+        transition: all .2s;
+    }
+
+    a:hover path {
+        fill: rgba(47, 47, 47, 0.64);
+
+    }
 }

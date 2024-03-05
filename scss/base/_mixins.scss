@@ -15,3 +15,12 @@
     height: 38px;
 }
 
+@mixin accordion_line {
+    display: block;
+    width: 14px;
+    height: 3px;
+    position: absolute;
+    background-color: #79AF98;
+    border-radius: 20px;
+    top: 50%;
+  }
