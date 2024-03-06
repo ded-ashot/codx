@@ -61,6 +61,10 @@ a {
   color: inherit;
 }
 
+.none {
+  display: none !important;
+}
+
 * {
   letter-spacing: 0.48px;
 }
@@ -76,9 +80,14 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 
 .title-2 {
-  font-size: 64px;
+  font-size: clamp(1.5rem, 0.7593rem + 3.7037vw, 4rem);
   line-height: 1;
   font-weight: 400;
 }
@@ -109,6 +118,7 @@ body {
 
 .header {
   padding-top: 17px;
+  position: relative;
 }
 .header__top {
   display: -webkit-box;
@@ -122,7 +132,12 @@ body {
           align-items: center;
   padding: 14px 28px;
 }
-.header__nav {
+@media screen and (max-width: 992px) {
+  .header__top {
+    overflow: hidden;
+  }
+}
+.header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,6 +147,11 @@ body {
   -webkit-column-gap: 46px;
      -moz-column-gap: 46px;
           column-gap: 46px;
+}
+@media screen and (max-width: 992px) {
+  .header__nav {
+    display: none;
+  }
 }
 .header__socials {
   display: -webkit-box;
@@ -143,6 +163,134 @@ body {
   -webkit-column-gap: 47px;
      -moz-column-gap: 47px;
           column-gap: 47px;
+}
+@media screen and (max-width: 992px) {
+  .header__socials {
+    display: none;
+  }
+}
+.header__burger {
+  position: absolute;
+  display: none;
+  top: 34px;
+  right: 58px;
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 992px) {
+  .header__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.header__burger-lines {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #2F2F2F;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.header__top_mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #A8C1D8;
+  z-index: 999;
+}
+
+.header__burger_active .header__burger-lines_1 {
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.header__burger_active .header__burger-lines_2 {
+  position: absolute;
+  -webkit-transform: translateX(200px);
+      -ms-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.header__burger_active .header__burger-lines_3 {
+  position: absolute;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.header__top_mobile .nav {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.header__top_mobile .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 50px;
+}
+
+.header__top_mobile .header__btn {
+  display: none;
+}
+
+.header__top_mobile .header__logo {
+  display: none;
+}
+
+.header__top_mobile .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__top_mobile .header__wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__top_mobile .header__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav__list {
@@ -216,22 +364,86 @@ body {
   padding-top: 113px;
   padding-bottom: 310px;
 }
+@media screen and (max-width: 992px) {
+  .promo {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .promo {
+    padding: 20px 0;
+  }
+}
 .promo__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 576px) {
+  .promo__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .promo__accent {
   padding-top: 130px;
 }
+@media screen and (max-width: 992px) {
+  .promo__accent {
+    padding-top: 0px;
+  }
+}
 .promo__title {
   padding-bottom: 25px;
+}
+@media screen and (max-width: 992px) {
+  .promo__title {
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .promo__title {
+    padding-bottom: 5px;
+  }
+  .promo__title br {
+    display: none;
+  }
 }
 .promo__text {
   font-size: 17px;
   line-height: 1.5;
 }
+@media screen and (max-width: 992px) {
+  .promo__text {
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promo__text {
+    font-size: 12px;
+  }
+}
 .promo__images {
   padding-left: 21px;
+}
+@media screen and (max-width: 576px) {
+  .promo__images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .promo__higher-img {
   position: relative;
@@ -241,6 +453,12 @@ body {
   -webkit-transform: translate(169px, -225px);
       -ms-transform: translate(169px, -225px);
           transform: translate(169px, -225px);
+}
+@media screen and (max-width: 992px) {
+  .promo__lower-img {
+    display: none;
+    max-width: 50%;
+  }
 }
 .promo__higher-person {
   position: absolute;

@@ -2,36 +2,93 @@
     padding-top: 113px;
     padding-bottom: 310px;
 
+    @media screen and (max-width: $breakpoints-lg) {
+        padding: 40px 0;
+    }
+
+    @media screen and (max-width: $breakpoints-sm) {
+        padding: 20px 0;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: $breakpoints-sm) {
+            grid-template-columns: 1fr;
+
+        }
     }
 
     &__accent {
         padding-top: 130px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-top: 0px;
+        }
     }
 
     &__title {
         padding-bottom: 25px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-bottom: 15px;
+        }
+
+        @media screen and (max-width: $breakpoints-sm) {
+            br {
+                display: none;
+            }
+
+            padding-bottom: 5px;
+        }
     }
 
     &__text {
+
         font-size: 17px;
         line-height: 1.5;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+
+        @media screen and (max-width: $breakpoints-md) {
+            font-size: 12px;
+        }
     }
 
     &__images {
         padding-left: 21px;
+
+        @media screen and (max-width: $breakpoints-sm) {
+            // grid-row-start: 1;
+            display: flex;
+            justify-content: center;
+        }
     }
 
 
     &__higher-img {
         position: relative;
+
+        @media screen and (max-width: $breakpoints-sm) {
+            // max-width: 150px;
+        }
     }
 
     &__lower-img {
         position: absolute;
         transform: translate(169px, -225px);
+
+        @media screen and (max-width: $breakpoints-lg) {
+            display: none;
+            max-width: 50%;
+        }
     }
 
     &__higher-person {

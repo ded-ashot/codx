@@ -14,12 +14,21 @@ body {
     max-width: 1230px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @media screen and (max-width: $breakpoints-lg) {
+        padding: 0 30px;
+    }
 }
 
 .title-2 {
-    font-size: 64px;
+    // font-size: 64px;
+    font-size: clamp(1.5rem, 0.7593rem + 3.7037vw, 4rem);
     line-height: 1;
     font-weight: 400;
+
+    // @media screen and (max-width: $breakpoints-lg) {
+    //     font-size: 40px;
+    // }
 }
 
 .title-3 {

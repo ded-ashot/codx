@@ -27,7 +27,7 @@ let tabs_btn = document.querySelectorAll('.staff__btn');
 let tabs_item = document.querySelectorAll('.staff__item');
 
 tabs_btn.forEach((item, index) => {
-     tabs_btn[index].addEventListener("click", function () {
+    tabs_btn[index].addEventListener("click", function () {
         tabs_btn[index].classList.add('btn_active');
         tabs_item[index].classList.add('staff__item_active');
 
@@ -41,10 +41,12 @@ tabs_btn.forEach((item, index) => {
 });
 
 
-// let burger_btn = document.querySelector('.header__burger');
+let burger_btn = document.querySelector('.header__burger');
+let header_top = document.querySelector('.header__top');
 
-// function burger() {
-//     burger_btn.classList.toggle('header__burger_active');
-// }
-// burger_btn.addEventListener("click", burger);
+function burger() {
+    burger_btn.classList.toggle('header__burger_active');
+    header_top.classList.toggle('header__top_mobile');
+}
+burger_btn.addEventListener("click", burger);
 
