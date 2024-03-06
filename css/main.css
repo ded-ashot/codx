@@ -245,12 +245,20 @@ body {
 .promo__higher-person {
   position: absolute;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
   border-radius: 30px;
+  align-items: center;
   padding: 5px 15px 5px 8px;
   -webkit-column-gap: 5px;
      -moz-column-gap: 5px;
@@ -263,12 +271,20 @@ body {
 .promo__lower-person {
   position: absolute;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
   border-radius: 30px;
+  align-items: center;
   padding: 7px 13px 7px 11px;
   -webkit-column-gap: 12px;
      -moz-column-gap: 12px;
@@ -361,10 +377,13 @@ body {
   font-size: 17px;
   line-height: 1.5;
 }
-.staff__wrapper {
-  display: grid;
+.staff__item {
+  display: none;
   grid-template-columns: 1fr 1fr;
   padding-top: 64px;
+}
+.staff__item_active {
+  display: grid;
 }
 .staff__buttons-wrapper {
   display: -webkit-box;

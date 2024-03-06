@@ -17,10 +17,14 @@
         line-height: 1.5;
     }
 
-    &__wrapper {
-        display: grid;
+    &__item {
+        display: none;
         grid-template-columns: 1fr 1fr;
         padding-top: 64px;
+
+        &_active {
+            display: grid;
+        }
     }
 
     &__buttons-wrapper {
