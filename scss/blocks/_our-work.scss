@@ -1,14 +1,26 @@
 .our-work {
     padding-top: 96px;
 
+    @media screen and (max-width: $breakpoints-md) {
+        padding-top: 40px;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: $breakpoints-md) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__text {
         padding-left: 48px;
         padding-top: 62px;
+
+        @media screen and (max-width: $breakpoints-md) {
+            grid-row: 1;
+        }
     }
 
     &__title {

@@ -1,6 +1,7 @@
 .accent {
 
-    font-size: 13px;
+    // font-size: 13px;
+    font-size: clamp(0.625rem, 0.5694rem + 0.2778vw, 0.8125rem);
 
     &_color_green {
         color: $accent-green;

@@ -31,16 +31,16 @@
     &__title {
         padding-bottom: 25px;
 
-        @media screen and (max-width: $breakpoints-lg) {
-            padding-bottom: 15px;
-        }
+        // @media screen and (max-width: $breakpoints-lg) {
+        //     padding-bottom: 15px;
+        // }
 
         @media screen and (max-width: $breakpoints-sm) {
             br {
                 display: none;
             }
 
-            padding-bottom: 5px;
+            // padding-bottom: 5px;
         }
     }
 
@@ -58,7 +58,15 @@
         }
 
         @media screen and (max-width: $breakpoints-md) {
-            font-size: 12px;
+            font-size: 14px;
+        }
+    }
+
+    &__lead {
+        font-size: clamp(0.6875rem, 0.5764rem + 0.5556vw, 1.0625rem);
+
+        @media screen and (max-width: $breakpoints-sm) {
+            text-align: center;
         }
     }
 
@@ -77,7 +85,7 @@
         position: relative;
 
         @media screen and (max-width: $breakpoints-sm) {
-            // max-width: 150px;
+            max-width: 200px;
         }
     }
 

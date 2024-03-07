@@ -4,6 +4,12 @@
     letter-spacing: 0.48px;
 }
 
+@media screen and (max-width: $breakpoints-lg) {
+    a {
+        pointer-events: none;
+    }
+}
+
 body {
     font-family: "Outfit", sans-serif;
     color: $main;
@@ -16,23 +22,19 @@ body {
     margin: 0 auto;
 
     @media screen and (max-width: $breakpoints-lg) {
-        padding: 0 30px;
+        padding: 0 20px;
     }
 }
 
 .title-2 {
-    // font-size: 64px;
     font-size: clamp(1.5rem, 0.7593rem + 3.7037vw, 4rem);
     line-height: 1;
     font-weight: 400;
-
-    // @media screen and (max-width: $breakpoints-lg) {
-    //     font-size: 40px;
-    // }
 }
 
 .title-3 {
-    font-size: 35px;
+    // font-size: 35px;
+    font-size: clamp(1.25rem, 0.9722rem + 1.3889vw, 2.1875rem);
     line-height: 1;
     font-weight: 400;
 }

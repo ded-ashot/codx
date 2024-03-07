@@ -9,6 +9,11 @@
     cursor: pointer;
     transition: all .2s ease-in;
 
+    @media screen and (max-width: $breakpoints-sm) {
+        padding: 5px 10px;
+        height: 40px !important;
+    }
+
     &:hover {
         background-color: $main-accent;
         border: 2px solid transparent;
@@ -23,5 +28,11 @@
     &_round {
         border-radius: 20px;
     }
+}
 
+@media screen and (max-width: $breakpoints-lg) {
+    .btn:hover {
+        background-color: $main;
+        border: 2px solid $main;
+    }
 }
