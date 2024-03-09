@@ -4,6 +4,10 @@
     height: 456px;
     z-index: -2;
 
+    @media screen and (max-width: $breakpoints-xl) {
+        display: none;
+    }
+
     &__title {
         padding-top: 71px;
         padding-bottom: 30px;

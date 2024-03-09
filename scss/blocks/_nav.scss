@@ -13,5 +13,11 @@
         &:hover {
             color: $main-accent;
         }
+
+
+        @media (hover: none) {
+            color: $main !important;
+            fill: $main !important;
+        }
     }
 }

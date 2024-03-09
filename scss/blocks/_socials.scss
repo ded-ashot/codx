@@ -9,6 +9,12 @@
 
     a:hover path {
         fill: rgba(47, 47, 47, 0.64);
+    }
 
+
+    @media (hover: none) {
+        path {
+            fill: $main !important;
+        }
     }
 }

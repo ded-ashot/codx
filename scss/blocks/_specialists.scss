@@ -2,13 +2,61 @@
     padding-top: 84px;
     padding-bottom: 185px;
 
+    @media screen and (max-width: $breakpoints-lg) {
+        padding: 40px 0;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        @media screen and (max-width: $breakpoints-md) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
     }
+
+   
 
     &__text {
         padding: 64px 90px 32px 64px;
+
+        @media screen and (max-width: $breakpoints-xl) {
+            padding: 0 16px 0 0;
+        }
+
+        @media screen and (max-width: $breakpoints-md) {
+            display: grid;
+            grid-template-columns: minmax(260px, 450px);
+            align-items: center;
+            row-gap: 25px;
+            padding: 0;
+        }
+    }
+
+    &__text-item {
+
+
+
+        @media screen and (max-width: $breakpoints-md) {
+            padding: 20px;
+
+            border-radius: 30px;
+
+            &_color_green {
+                border: 1px solid $accent-green;
+            }
+
+            &_color_pink {
+                border: 1px solid $accent-pink;
+            }
+
+            &_color_yellow {
+                border: 1px solid $accent-yellow;
+            }
+        }
+
     }
 
     &__number {
@@ -24,6 +72,11 @@
         border-radius: 30px;
         color: $white;
 
+        @media screen and (max-width: $breakpoints-lg) {
+            height: 30px;
+            width: 50px;
+        }
+
         &_color_green {
             background-color: $accent-green;
         }
@@ -38,16 +91,42 @@
     }
 
     &__title {
+
         padding-bottom: 13px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-bottom: 5px;
+        }
+    }
+
+    &__title-3 {
+        font-size: clamp(1.25rem, 0.9722rem + 1.3889vw, 2.1875rem);
     }
 
     &__description {
+        font-size: clamp(0.875rem, 0.8009rem + 0.3704vw, 1.125rem);
         line-height: 1.44;
         padding-bottom: 32px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-bottom: 10px;
+        }
     }
 
     &__images {
         display: flex;
         justify-content: end;
+        align-items: flex-start;
+
+        @media screen and (max-width: $breakpoints-md) {
+            display: none;
+        }
+    }
+
+    &__img {
+
+        @media (hover: none) {
+            pointer-events: none;
+        }
     }
 }

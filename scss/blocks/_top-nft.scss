@@ -1,22 +1,56 @@
 .top-nft {
     padding-top: 104px;
 
+    @media screen and (max-width: $breakpoints-lg) {
+        padding: 40px 0;
+    }
+
     &__container {
         max-width: 1102px;
         padding: 0 15px;
     }
 
+    &__item {
+        &_hidden {
+            @media screen and (max-width: $breakpoints-sm) {
+                display: none;
+            }
+        }
+    }
+
     &__title {
         text-align: center;
         padding-bottom: 16px;
+
+        @media screen and (max-width: $breakpoints-md) {
+            padding-bottom: 25px;
+        }
     }
 
     &__wrapper {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, minmax(150px, 322px));
         column-gap: 38px;
         row-gap: 41px;
         padding-bottom: 64px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-bottom: 40px;
+            column-gap: 15px;
+            row-gap: 20px;
+        }
+
+        @media screen and (max-width: $breakpoints-md) {
+            grid-template-columns: repeat(2, minmax(150px, 322px));
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+
+        @media screen and (max-width: $breakpoints-sm) {
+            grid-template-columns: repeat(1, minmax(150px, 322px));
+
+        }
+
     }
 
     &__item-link {
@@ -32,6 +66,17 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding: 10px;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        @media screen and (max-width: $breakpoints-md) {
+            padding: 15px;
+            flex-direction: row;
+        }
     }
 
     &__item-information {
@@ -41,7 +86,7 @@
     }
 
     &__item-title {
-        font-size: 16px;
+        font-size: clamp(0.875rem, 0.838rem + 0.1852vw, 1rem);
         line-height: 1.1;
     }
 
@@ -49,11 +94,15 @@
         display: flex;
         align-items: center;
         gap: 8px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            gap: 25px;
+        }
     }
 
     &__item-count {
         font-weight: 700;
-        font-size: 17px;
+        font-size: clamp(0.875rem, 0.838rem + 0.1852vw, 1rem);
     }
 
     &__buttons-eye {
@@ -84,9 +133,14 @@
         &:hover .bracket {
             transform: translate(0, -125px);
         }
+
+        @media (hover: none) {
+            pointer-events: none;
+        }
     }
 
     &__item-image {
+
         transition: transform .2s ease-in;
 
         &:hover {
@@ -97,6 +151,8 @@
     &__buttons-wrapper {
         display: flex;
         justify-content: center;
+
+
     }
 
     &__btn {

@@ -4,11 +4,6 @@
     letter-spacing: 0.48px;
 }
 
-@media screen and (max-width: $breakpoints-lg) {
-    a {
-        pointer-events: none;
-    }
-}
 
 body {
     font-family: "Outfit", sans-serif;
@@ -16,14 +11,11 @@ body {
     font-size: 18px;
 }
 
+
 .container {
     max-width: 1230px;
     padding: 0 15px;
     margin: 0 auto;
-
-    @media screen and (max-width: $breakpoints-lg) {
-        padding: 0 20px;
-    }
 }
 
 .title-2 {
@@ -40,21 +32,34 @@ body {
 }
 
 .visually-hidden {
-    /* Contain text within 1px box */
     height: 1px;
     overflow: hidden;
     width: 1px;
-
-    /* Keep the layout */
     position: absolute;
-
-    /* Remove any visible trace (e.g. background color) */
     clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
-    /* browsers in the future */
-
-    /* Prevent the screen reader to skip spaces between words */
     white-space: nowrap;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: $accent-green;
+    padding: 10px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $breakpoints-lg) {
+        bottom: 30px;
+        right: 30px;
+    }
+
+
+    &_active {
+        display: flex;
+    }
 }

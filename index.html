@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>CodX</title>
+    <link rel="icon" href="img/logo/x.ico">
+
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header" id="top">
         <div class="container">
             <div class="header__top ">
-
                 <div class="header__wrapper">
                     <a class="header__logo" href="#"><svg width="94" height="31" viewBox="0 0 94 31" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -36,9 +39,9 @@
                     <div class="header__nav">
                         <nav class="nav">
                             <ul class="nav__list">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">NFTs</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a class="scrollTo" href="#about-us">About us</a></li>
+                                <li><a class="scrollTo" href="#nft">NFTs</a></li>
+                                <li><a class="scrollTo" href="#contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -96,7 +99,7 @@
         </div>
     </header>
 
-    <section class="promo ">
+    <section class="promo">
         <div class="container">
             <div class="promo__wrapper">
                 <div class="promo__text">
@@ -172,7 +175,7 @@
         </div>
     </section>
 
-    <section class="staff ">
+    <section class="staff" id="about-us">
         <div class="container staff__container">
             <div class="staff__title">
                 <h2 class="title-2">Hey there, we are</h2>
@@ -249,7 +252,7 @@
         </div>
     </section>
 
-    <section class="our-work ">
+    <section class="our-work">
         <div class="container">
             <div class="our-work__wrapper">
                 <div class="our-work__images">
@@ -275,55 +278,56 @@
         </div>
     </section>
 
-    <section class="specialists none">
+    <section class="specialists">
         <div class="container">
             <div class="specialists__wrapper">
                 <div class="specialists__text">
-                    <div class="specialists__text-item">
+                    <div class="specialists__text-item specialists__text-item_color_green">
                         <span class="specialists__number specialists__number_color_green">01</span>
                         <div class="specialists__title">
-                            <h3 class="title-3"><b>Motion Graphic</b></h3>
+                            <h3 class="title-3 specialists__title-3"><b>Motion Graphic</b></h3>
                         </div>
                         <div class="specialists__description">
                             <p>
                                 Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et
-                                magna at
+                                magna&nbsp;at
                             </p>
                         </div>
                     </div>
-                    <div class="specialists__text-item">
+                    <div class="specialists__text-item specialists__text-item_color_pink">
                         <span class="specialists__number specialists__number_color_pink">02</span>
                         <div class="specialists__title">
-                            <h3 class="title-3"><b>Digital Illustration</b></h3>
+                            <h3 class="title-3 specialists__title-3"><b>Digital Illustration</b></h3>
                         </div>
                         <div class="specialists__description">
                             <p>
                                 Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et
-                                magna at
+                                magna&nbsp;at
                             </p>
                         </div>
                     </div>
-                    <div class="specialists__text-item">
+                    <div class="specialists__text-item specialists__text-item_color_yellow">
                         <span class="specialists__number specialists__number_color_yellow">03</span>
                         <div class="specialists__title">
-                            <h3 class="title-3"><b>Photography</b></h3>
+                            <h3 class="title-3 specialists__title-3"><b>Photography</b></h3>
                         </div>
                         <div class="specialists__description">
                             <p>
                                 Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et
-                                magna at
+                                magna&nbsp;at
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="specialists__images">
-                    <img src="img/specialists/specialists-person1.png" alt="specialists image" data-tilt>
+                    <img class="specialists__img" src="img/specialists/specialists-person1.png" alt="specialists image"
+                        data-tilt>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="banner none">
+    <section class="banner">
         <div class="container">
             <div class="banner__title">
                 <h2 class="title-2">Join Us and Discover <br>our most precious NFT</h2>
@@ -337,7 +341,7 @@
         </div>
     </section>
 
-    <section class="collections none">
+    <section class="collections">
         <div class="container">
             <div class="collections__title">
                 <h2 class="title-2">Browse by Collections</h2>
@@ -347,7 +351,7 @@
                     <a href="#">
                         <img src="img/collections/collections-image1.png" alt="">
                         <div class="collections__heading">
-                            <h3>Collectibles</h3>
+                            <h3 class="collections__heading-text">Collectibles</h3>
                         </div>
                     </a>
                 </div>
@@ -355,15 +359,15 @@
                     <a href="#">
                         <img src="img/collections/collections-image2.png" alt="">
                         <div class="collections__heading">
-                            <h3>Art</h3>
+                            <h3 class="collections__heading-text">Art</h3>
                         </div>
                     </a>
                 </div>
-                <div class="collections__item">
+                <div class="collections__item collections__item_hidden">
                     <a href="#">
                         <img src="img/collections/collections-image3.png" alt="">
                         <div class="collections__heading">
-                            <h3>Photography</h3>
+                            <h3 class="collections__heading-text">Photography</h3>
                         </div>
                     </a>
                 </div>
@@ -375,13 +379,13 @@
         </div>
     </section>
 
-    <section class="top-nft none">
+    <section class="top-nft" id="nft">
         <div class="container top-nft__container">
             <div class="top-nft__title">
                 <h2 class="title-2">Top NFT</h2>
             </div>
             <div class="top-nft__wrapper">
-                <div class="top-nft__item">
+                <div class="top-nft__item ">
                     <a class="top-nft__item-link" href="#">
                         <img class="top-nft__item-image" src="img/top-nft/IMAGE.png" alt="top nft image">
                     </a>
@@ -449,7 +453,7 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
                         </div>
                     </div>
                 </div>
-                <div class="top-nft__item">
+                <div class="top-nft__item top-nft__item_hidden">
                     <a class="top-nft__item-link" href="#">
                         <img class="top-nft__item-image" src="img/top-nft/IMAGE-2.png" alt="top nft image">
                     </a>
@@ -483,7 +487,7 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
                         </div>
                     </div>
                 </div>
-                <div class="top-nft__item">
+                <div class="top-nft__item top-nft__item_hidden">
                     <a class="top-nft__item-link" href="#">
                         <img class="top-nft__item-image" src="img/top-nft/IMAGE-3.png" alt="top nft image">
                     </a>
@@ -517,7 +521,7 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
                         </div>
                     </div>
                 </div>
-                <div class="top-nft__item">
+                <div class="top-nft__item top-nft__item_hidden">
                     <a class="top-nft__item-link" href="#">
                         <img class="top-nft__item-image" src="img/top-nft/IMAGE-4.png" alt="top nft image">
                     </a>
@@ -552,7 +556,7 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
                         </div>
                     </div>
                 </div>
-                <div class="top-nft__item">
+                <div class="top-nft__item  top-nft__item_hidden">
                     <a class="top-nft__item-link" href="#">
                         <img class="top-nft__item-image" src="img/top-nft/IMAGE-5.png" alt="top nft image">
                     </a>
@@ -593,7 +597,7 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
         </div>
     </section>
 
-    <section class="faq none">
+    <section class="faq">
         <div class="container faq__container">
             <div class="faq__title">
                 <h2 class="title-2">FAQ</h2>
@@ -669,13 +673,13 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
         </div>
     </section>
 
-    <footer class="footer none">
+    <footer class="footer" id="contact">
         <h2 class="title-2 visually-hidden">Footer</h2>
         <div class="container footer__container">
             <div class="footer__wrapper">
                 <div class="footer__col">
                     <a href="#">
-                        <svg width="138" height="50" viewBox="0 0 138 50" fill="none"
+                        <svg class="footer__logo" width="138" height="50" viewBox="0 0 138 50" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21.75 49.7382C18.9643 49.7382 16.1786 49.2147 13.5 47.9058C11.0357 46.7277 8.78572 44.8953 6.85715 42.6702C5.03572 40.445 3.53572 37.6963 2.46429 34.8168C1.39286 31.6754 0.857149 28.4031 0.964292 25.1309C0.964292 21.8586 1.50001 18.4555 2.46429 15.445C3.53572 12.4346 4.92858 9.81675 6.85715 7.59162C10.8214 3.01047 16.1786 0.52356 21.6429 0.52356C24.4286 0.52356 27.3214 1.04712 30 2.35602C32.3571 3.53403 34.6072 5.10471 36.4286 7.32984L29.8929 15.3141C28.9286 14.0052 27.75 13.089 26.4643 12.4346C24.9643 11.6492 23.3571 11.2565 21.6429 11.3874C20.1429 11.3874 18.6429 11.6492 17.3571 12.3037C16.0714 12.9581 15 13.8743 14.0357 15.1832C13.0714 16.4921 12.3214 17.9319 11.7857 19.5026C11.25 21.3351 11.0357 23.2984 11.0357 25.2618C11.0357 27.2251 11.25 29.1885 11.7857 31.0209C12.3214 32.5916 13.0714 34.1623 14.0357 35.4712C15 36.6492 16.1786 37.6963 17.3571 38.3508C18.75 39.0052 20.25 39.267 21.6429 39.267C23.25 39.267 24.9643 39.0052 26.4643 38.2199C27.75 37.5654 29.0357 36.5183 30 35.2094L36.6429 43.1937C34.7143 45.288 32.5714 46.9895 30.2143 48.1675C27.4286 49.2147 24.6429 49.7382 21.75 49.7382ZM51.3214 49.7382C48.6429 49.7382 45.9643 49.0838 43.6072 47.5131C41.4643 46.0733 39.5357 43.9791 38.25 41.3613C36.9643 38.6126 36.2143 35.6021 36.3214 32.4607C36.3214 29.4503 36.9643 26.3089 38.25 23.6911C39.5357 21.0733 41.3572 18.9791 43.6072 17.5393C45.9643 15.9686 48.6429 15.1832 51.3214 15.1832C54 15.1832 56.6786 15.9686 59.0357 17.5393C61.2857 18.9791 63.1071 21.0733 64.3929 23.6911C65.6786 26.3089 66.4286 29.3194 66.3214 32.3298C66.3214 35.4712 65.6786 38.4817 64.3929 41.2304C63.1071 43.8482 61.2857 45.9424 59.0357 47.3822C56.5714 48.9529 54 49.7382 51.3214 49.7382ZM51.3214 39.267C52.2857 39.267 53.25 39.0052 54.1071 38.4817C54.8571 37.9581 55.6071 37.0419 56.0357 36.1257C56.4643 35.0785 56.6786 33.7696 56.6786 32.5916C56.6786 31.4136 56.4643 30.1047 55.9286 29.0576C55.5 28.0105 54.8571 27.2251 54.1071 26.7016C53.25 26.178 52.2857 25.7853 51.3214 25.9162C50.3572 25.9162 49.3929 26.178 48.5357 26.8325C47.7857 27.356 47.1429 28.2722 46.7143 29.3194C46.2857 30.3665 46.0714 31.5445 46.0714 32.8534C46.0714 34.0314 46.2857 35.2094 46.7143 36.3874C47.1429 37.4346 47.7857 38.2199 48.5357 38.7435C49.2857 39.0052 50.25 39.267 51.3214 39.267ZM80.0357 49.6073C75.2143 49.7382 70.7143 46.5969 68.4643 41.3613C67.2857 38.6126 66.75 35.6021 66.8571 32.5916C66.8571 29.5812 67.3929 26.4398 68.4643 23.6911C69.5357 21.2042 71.1429 19.1099 73.0714 17.6702C75.2143 16.0995 77.5714 15.445 80.0357 15.445C81.6429 15.445 83.25 15.8377 84.75 16.623C86.1429 17.2775 87.4286 18.3246 88.3929 19.7644C89.3571 21.0733 90 22.644 90.1071 24.3455V40.3141C89.8929 42.0157 89.25 43.7173 88.3929 45.0262C87.3214 46.466 86.0357 47.644 84.6429 48.5602C83.1429 49.2147 81.5357 49.6073 80.0357 49.6073ZM81.6429 39.267C82.6071 39.267 83.5714 39.0052 84.4286 38.4817C85.1786 37.9581 85.8214 37.0419 86.25 36.1257C86.7857 35.0785 87 33.7696 87 32.5916C87 31.4136 86.7857 30.2356 86.3571 29.1885C85.9286 28.2722 85.2857 27.356 84.5357 26.8325C83.6786 26.178 82.7143 25.9162 81.75 25.9162C80.7857 25.9162 79.8214 26.178 78.9643 26.8325C78.2143 27.4869 77.5714 28.2722 77.0357 29.1885C76.6071 30.2356 76.3929 31.4136 76.3929 32.5916C76.3929 33.7696 76.6071 34.9476 77.0357 36.1257C77.4643 37.0419 78.1071 37.9581 78.9643 38.4817C79.7143 38.8743 80.6786 39.267 81.6429 39.267ZM96 48.9529H86.5714V40.1832L87.8571 32.0681L86.3571 24.0838V0H95.8929L96 48.9529Z"
@@ -695,7 +699,7 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
                     </a>
                     <p class="footer__excerpt">Join the community</p>
                     <div class="footer__socials">
-                        <ul class="socials">
+                        <ul class="socials footer__socials-wrapper">
                             <li>
                                 <a href="#">
                                     <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
@@ -782,6 +786,10 @@ C700,322.4,677.6,300,650,300z M400,600c-27.6,0-50-22.4-50-50c0-27.6,22.4-50,50-5
             </div>
         </div>
     </footer>
+
+    <a href="#top" class="back-to-top">
+        <img src="img/svg/arrow-up.svg" alt="scroll arrow up">
+    </a>
 
     <script src="js/script.js"></script>
     <script src="js/vanilla-tilt.js"></script>

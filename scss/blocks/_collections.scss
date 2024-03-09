@@ -1,24 +1,61 @@
 .collections {
     padding-top: 101px;
 
+    @media screen and (max-width: $breakpoints-lg) {
+        padding: 40px 0;
+    }
+
+
+
     &__title {
         text-align: center;
         padding-bottom: 73px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-bottom: 40px;
+        }
+
+        @media screen and (max-width: $breakpoints-sm) {
+            padding-bottom: 25px;
+        }
     }
 
     &__wrapper {
         display: grid;
-        grid-template-columns: minmax(260px, 358px) minmax(260px, 358px) minmax(260px, 358px);
+        grid-template-columns: minmax(200px, 358px) minmax(200px, 358px) minmax(200px, 358px);
         justify-content: space-between;
+        gap: 15px;
         padding-bottom: 64px;
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding-bottom: 25px;
+        }
+
+        @media screen and (max-width: $breakpoints-md) {
+            grid-template-columns: minmax(200px, 300px);
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        &_hidden {
+            @media screen and (max-width: $breakpoints-sm) {
+                display: none;
+            }
+        }
     }
 
     &__heading {
         padding: 29px 50px 37px 50px;
+        font-size: clamp(1.125rem, 0.9769rem + 0.7407vw, 1.625rem);
+
+        @media screen and (max-width: $breakpoints-lg) {
+            padding: 20px;
+        }
     }
 
-    &__heading h3 {
-        font-size: 26px;
+    &__heading-text {
+        font-size: clamp(1.125rem, 0.9769rem + 0.7407vw, 1.625rem);
     }
 
     &__buttons-wrapper {

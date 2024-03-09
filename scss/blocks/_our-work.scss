@@ -1,8 +1,8 @@
 .our-work {
     padding-top: 96px;
 
-    @media screen and (max-width: $breakpoints-md) {
-        padding-top: 40px;
+    @media screen and (max-width: $breakpoints-lg) {
+        padding: 40px 0;
     }
 
     &__wrapper {
@@ -11,15 +11,20 @@
 
         @media screen and (max-width: $breakpoints-md) {
             grid-template-columns: 1fr;
+            text-align: center;
+            justify-items: center;
         }
     }
 
     &__text {
         padding-left: 48px;
         padding-top: 62px;
+        font-size: clamp(0.875rem, 0.8009rem + 0.3704vw, 1.125rem);
 
         @media screen and (max-width: $breakpoints-md) {
-            grid-row: 1;
+            padding-left: 0px;
+            padding-top: 25px;
+
         }
     }
 
@@ -30,10 +35,17 @@
 
     &__caption {
         padding-bottom: 38px;
+
+        @media screen and (max-width: $breakpoints-md) {
+
+            padding-bottom: 16px;
+
+        }
     }
 
     &__title-2 {
-        font-size: 48px;
+        // font-size: 48px;
+        font-size: clamp(1.5rem, 1.0556rem + 2.2222vw, 3rem);
         line-height: 1;
         letter-spacing: 0.48px;
     }
@@ -42,11 +54,21 @@
         line-height: 1.44;
         letter-spacing: 0.48px;
         padding-bottom: 32px;
+
+        @media screen and (max-width: $breakpoints-md) {
+
+            padding-bottom: 16px;
+
+        }
     }
 
     &__buttons-wrapper {
         display: flex;
         justify-content: end;
+
+        @media screen and (max-width: $breakpoints-md) {
+            justify-content: center;
+        }
     }
 
     &__btn {
@@ -55,5 +77,10 @@
         line-height: 1.1;
         padding: 0 40px;
         height: 44px;
+
+        @media screen and (max-width: $breakpoints-md) {
+            height: 40px;
+            padding: 0 20px;
+        }
     }
 }

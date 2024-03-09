@@ -11,6 +11,10 @@
         @media screen and (max-width: $breakpoints-lg) {
             overflow: hidden;
         }
+
+        @media screen and (max-width: $breakpoints-sm) {
+            padding: 14px 0px;
+        }
     }
 
     &__wrapper {
@@ -39,7 +43,7 @@
         position: absolute;
         display: none;
         top: 34px;
-        right: 48px;
+        right: 43px;
         width: 30px;
         height: 30px;
 
@@ -49,6 +53,10 @@
             gap: 5px;
             width: 30px;
             justify-content: center;
+        }
+
+        @media screen and (max-width: $breakpoints-sm) {
+            right: 15px;
         }
     }
 
